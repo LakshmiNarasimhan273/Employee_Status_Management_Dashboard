@@ -1,0 +1,241 @@
+:root {
+  --dark: #2b2d42;
+  --light: #adb5bd;
+  --border: #dee2eb;
+  --border-btn: #edf2f4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.nav-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.border-shadow {
+  border: 1px 3px 10px solid var(--border-btn);
+  box-shadow: 1px 3px 10px #e9eced;
+}
+
+.text-dark {
+  color: var(--dark);
+}
+
+.inline {
+  display: inline-block;
+}
+
+.text-light {
+  color: var(--light);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#header nav {
+  background-color: #f7d3e1;
+  padding: 1em 0;
+  width: 100%;
+}
+
+#site-main {
+  margin-top: 6em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#site-main .container .box-nav > a {
+  font-size: 1em;
+  padding: 1em 1em;
+}
+
+#site-main .container form {
+  margin: 2em 0;
+}
+
+table {
+  border-spacing: 0px;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  padding: 0.75em;
+  vertical-align: top;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.table td > a.btn {
+  padding: 0.3em 1em;
+  font-size: 1.1em;
+  margin: 0 0.2em;
+}
+
+.table tr:hover {
+  background-color: #cbd5f0;
+  transition: 0.8s;
+}
+
+.table tr:hover td > a {
+  box-shadow: none;
+}
+
+.table .thead-dark th {
+  color: #fff;
+  background-color: var(--dark);
+  border-color: black;
+}
+
+@media only screen and (max-width: 1024px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid var(--border);
+  }
+
+  td {
+    border: none;
+    position: relative;
+  }
+}
+
+/* Add & Update User page */
+
+.form-title {
+  margin-top: 2em;
+}
+
+.form-title > h2 {
+  padding: 0.3em 0;
+}
+
+.new_user {
+  max-width: 780px;
+  margin: auto;
+}
+
+#update_user .form-group,
+#add_user .form-group {
+  margin: 0.4em 0;
+}
+
+#update_user .form-group input[type="text"],
+#add_user .form-group input[type="text"] {
+  width: 100%;
+  padding: 0.6em 0;
+  margin: 0.5em 0;
+  border: 1px solid var(--border);
+  font-family: serif;
+  font-size: 1em;
+  border-radius: 0.2em;
+}
+
+#update_user .form-group .radio,
+#add_user .form-group .radio {
+  margin: 1em 2em;
+}
+
+/* Adding style to Radio Button */
+
+.radio input[type="radio"] {
+  position: relative;
+  opacity: 0;
+}
+
+.radio input[type="radio"] + .radio-label::before {
+  content: "";
+  background: var(--border-btn);
+  border-radius: 100%;
+  border: 1px solid var(--border);
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: -0em;
+  margin-right: 0.5em;
+  vertical-align: top;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+.radio input[type="radio"]:checked + .radio-label::before {
+  background-color: #194f92;
+  box-shadow: inset 0 0 0 4px white;
+}
+
+.radio input[type="radio"]:focus + .radio-label::before {
+  outline: none;
+  border-color: #cbd5f0;
+}
+
+.radio input[type="radio"]:disabled + .radio-label::before {
+  box-shadow: inset 0 0 0 4px #e9eced;
+  border-color: #b4b4b4;
+  background: #b4b4b4;
+}
+
+#update_user .form-group .btn,
+#add_user .form-group .btn {
+  width: 100%;
+  padding: 0.9em 1em;
+  background-color: #f7d3e1;
+  border: none;
+  font-family: serif;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 0.2em;
+  margin: 0.5em 0;
+}
+
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover {
+  background-color: var(--dark);
+  color: var(--border-btn);
+  transition: 0.8s;
+}
